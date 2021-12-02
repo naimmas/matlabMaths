@@ -1,0 +1,18 @@
+clear;close all;clc;
+[r,the]=meshgrid([0:0.1:5],[0:pi/10:2*pi]);
+x1=r.*cos(the);
+y1=r.*sin(the);
+z1=x1.^2+y1.^2;
+figure;
+surfc(x1,y1,z1);
+title('Eliptik Paraboloid');
+labels;
+figure;
+subplot(121);
+plot(y1,z1);
+labels;
+title('Eliptik Paraboloid''in yan görünümü');
+subplot(122);
+plot(x1,y1);
+labels;
+title('Eliptik Paraboloid''in üst görünümü');
